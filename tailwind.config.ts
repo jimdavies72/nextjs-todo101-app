@@ -8,13 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      boxShadow: {
+        "txt-sdw": "drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui")
+  ],
 };
 export default config;

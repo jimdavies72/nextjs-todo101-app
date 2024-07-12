@@ -2,28 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --light-shadow: 5px 5px 6px 0px rgba(134, 134, 134, 0.3);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
 
+h1 {
+  /* font-family: var(--font-lato); */
+  font-size: 2.125rem;
+  font-weight: 900;
+}
+
+h2 {
+  /* font-family: var(--font-lato); */
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+h3{
+  /* font-family: var(--font-noto-serif); */
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+h4 {
+  /* font-family: var(--font-noto-serif); */
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h5 {
+  /* font-family: var(--font-montserrat); */
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+p {
+  /* font-family: var(--font-montserrat); */
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
 body {
+  margin-left: 5px;
+  margin-right: 5px;
+
+  overflow-y: scroll;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+input {
+  background-color: transparent;
+  border: solid 1px gray;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  color: red;
+}
+
+button {
+  border: solid 1px green;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  color: green;
 }
 
 @layer utilities {
