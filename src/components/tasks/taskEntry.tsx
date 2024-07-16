@@ -1,15 +1,15 @@
 'use client';
 import { FormEvent, ChangeEvent } from "react";
-import { useEffect, useState } from "react";
 import { httpRequest } from "@/utils/dataHelpers";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-const TaskEntry = () => {
+const TaskEntry = ({ userId }: { userId: string }) => {
   const router = useRouter();
   const [formData, setFormData] = useState({});
   
   useEffect(() => {
-    setFormData({userId: "1234"});    
+    setFormData({userId: userId});    
   }, []);
 
   const handleData = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -24,12 +24,12 @@ const Navbar = () => {
         {
           id: 1,
           link: "login",
-          page: "api/auth/login",
+          page: "/api/auth/login",
         },
         {
           id: 2,
           link: "sign-up",
-          page: "api/auth/signup",
+          page: "/api/auth/signup",
         },
       ];
     } else {
@@ -37,7 +37,7 @@ const Navbar = () => {
         {
           id: 2,
           link: "logout",
-          page: "api/auth/logout",
+          page: "/api/auth/logout",
         },
         {
           id: 3,

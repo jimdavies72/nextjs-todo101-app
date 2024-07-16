@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 
 const createEndpoint = (endpoint: string) => {
   if (endpoint.length === 0) {
@@ -40,10 +39,11 @@ export const httpRequest = async (
     }
     
     const response = await fetch(createEndpoint(endpoint) || "", requestInit);
-    
+
+
     if (response.statusText === "No Content") {
       return null;
-    }else if (response.status < 300 ) {
+    } else if (response ) {
       return response.json();
     };
     throw new URIError("failed to fetch data");
