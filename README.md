@@ -8,4 +8,4 @@ NextJS
 
 CSS: Tailwind
 
-Authentication: Auth0
+Authentication: Auth0 JWT
