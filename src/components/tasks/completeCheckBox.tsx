@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { httpRequest } from "@/utils/dataHelpers";
 
 const CompleteCheckBox = ( 
-  { _id, completed }: { _id: string, completed: boolean }
+  { _id, token, completed }: { _id: string, token: string, completed: boolean }
 ) => {
   const [isChecked, setIsChecked] = useState(completed);
 
@@ -21,7 +21,7 @@ const CompleteCheckBox = (
       }
     }
 
-    await httpRequest("/tasks/update", payload, "PATCH", {cache: 'no-store'});
+    await httpRequest("/tasks/update", payload, "PATCH", token, {cache: 'no-store'});
 
   };
 

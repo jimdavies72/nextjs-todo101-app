@@ -4,7 +4,7 @@ import { httpRequest } from "@/utils/dataHelpers";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-const TaskEntry = ({ userId }: { userId: string }) => {
+const TaskEntry = ({ userId, token }: { userId: string, token: string }) => {
   const router = useRouter();
   const [formData, setFormData] = useState({});
   
@@ -25,7 +25,8 @@ const TaskEntry = ({ userId }: { userId: string }) => {
     const response: Response = await httpRequest(
       "/tasks",
       formData,
-      "POST"
+      "POST",
+      token ?? ""
     );
 
     if (response) {

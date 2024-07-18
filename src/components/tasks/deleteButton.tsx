@@ -2,7 +2,7 @@
 import { httpRequest } from "@/utils/dataHelpers";
 import { useRouter } from "next/navigation";
 
-const DeleteButton = ({ _id }: { _id: string }) => {
+const DeleteButton = ({ _id, token }: { _id: string, token: string }) => {
   const router = useRouter();
 
   const handleDelete = async () => {
@@ -11,7 +11,7 @@ const DeleteButton = ({ _id }: { _id: string }) => {
       filterValue: _id
     };
     
-    await httpRequest("/tasks/delete", payload, "PATCH", { cache: "no-store" });
+    await httpRequest("/tasks/delete", payload, "PATCH", token, { cache: "no-store" });
 
     router.refresh();
   };

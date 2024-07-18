@@ -29,11 +29,11 @@ export const ProfileForm = ({ userData }: { userData: Claims}) => {
     const response: Response = await httpRequest(
       `/api/v2/users/${userData.sub}`,
       formData,
-      "PATCH"
+      "PATCH",
+      ""
     );
 
     if (response) {
-      console.log("response", response);
       router.refresh();
     }
   }
