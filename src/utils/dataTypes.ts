@@ -21,5 +21,6 @@ type UserProfileData = {
   email_verified: boolean;
   sub: string;
   sid: string;
-}
+};
+
 export type { Task, Tasks, UserProfileData };

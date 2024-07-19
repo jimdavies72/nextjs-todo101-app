@@ -65,7 +65,6 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    //setNav(false);
     setNavLinks();
   }, [sub]);
 
